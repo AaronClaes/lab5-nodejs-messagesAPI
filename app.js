@@ -4,6 +4,7 @@ let express = require("express");
 let path = require("path");
 let cookieParser = require("cookie-parser");
 let logger = require("morgan");
+let cors = require("cors");
 
 let app = express();
 
@@ -30,6 +31,7 @@ let messagesRouter = require("./routes/api/v1/messages");
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
+app.use(cors());
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
