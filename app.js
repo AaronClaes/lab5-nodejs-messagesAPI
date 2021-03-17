@@ -1,3 +1,4 @@
+require("dotenv").config();
 let createError = require("http-errors");
 let express = require("express");
 let path = require("path");
@@ -7,10 +8,13 @@ let logger = require("morgan");
 let app = express();
 
 const mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost:27017/messagesDB", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect(
+  `mongodb+srv://Aaron:${process.env.DB_PASS}@cluster0.yjlnc.mongodb.net/messagesDB?retryWrites=true&w=majority`,
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  }
+);
 mongoose.set("useFindAndModify", false);
 
 const db = mongoose.connection;
