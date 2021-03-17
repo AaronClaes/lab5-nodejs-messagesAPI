@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-sizing: border-box;
+  color: white;
+}
+
+.center {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: rgb(53, 53, 53);
+  padding: 2rem;
+  border-radius: 25px;
+}
+
+.title {
+  margin-bottom: 1rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  margin: 1rem 0;
+  padding: 0.25rem;
+  background-color: rgb(90, 90, 90);
+}
